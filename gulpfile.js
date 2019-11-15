@@ -20,11 +20,11 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 
-gulp.task("del", function() {
+gulp.task("del", function () {
   return del("build");
 });
 
-gulp.task("css", function() {
+gulp.task("css", function () {
   return gulp
     .src("source/scss/style.scss")
     .pipe(plumber())
@@ -39,7 +39,7 @@ gulp.task("css", function() {
     .pipe(server.stream());
 });
 
-gulp.task("images", function() {
+gulp.task("images", function () {
   return gulp
     .src("source/img/**/*.{png,jpg,svg}")
     .pipe(
@@ -52,16 +52,16 @@ gulp.task("images", function() {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("webp", function() {
+gulp.task("webp", function () {
   return gulp
     .src("build/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img/"));
 });
 
-gulp.task("sprite", function() {
+gulp.task("sprite", function () {
   return gulp
-    .src("source/img/*.svg")
+    .src("source/**/*.svg")
     .pipe(
       svgstore({
         inlineSvg: true
@@ -71,7 +71,7 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("scripts:vendor", function() {
+gulp.task("scripts:vendor", function () {
   return gulp
     .src("source/js/vendor/**/*.js")
     .pipe(plumber())
@@ -85,7 +85,7 @@ gulp.task("scripts:vendor", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src("source/js/modules/**/*.js")
     .pipe(plumber())
@@ -99,14 +99,14 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return gulp
     .src("source/*.html")
     .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp
     .src(
       [
@@ -123,7 +123,7 @@ gulp.task("copy", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("refresh", function(done) {
+gulp.task("refresh", function (done) {
   server.reload();
   done();
 });
@@ -143,7 +143,7 @@ gulp.task(
   )
 );
 
-gulp.task("server", function() {
+gulp.task("server", function () {
   server.init({
     server: "build/",
     notify: false,

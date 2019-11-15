@@ -118,6 +118,15 @@
   }
 }
 
+@mixin scale {
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transition: transform 0.2s linear;
+    transform: scale(1.1);
+  }
+}
+
 @mixin hover-light {
   transition: opacity 0.2s linear;
 
@@ -144,4 +153,9 @@
   } @else {
     font-family: "object-fit: #{$fit}";
   }
+}
+
+@mixin fieldset-reset {
+  border: none;
+  padding: 0;
 }

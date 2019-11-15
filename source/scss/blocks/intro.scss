@@ -1,7 +1,102 @@
 /* Intro styles start */
 
 .intro {
-  height: 100vh;
-  background: url(../img/intro-bg.jpg) no-repeat center;
-  background-size: cover;
+  position: relative;
+  // background: url(../img/intro-bg.jpg) no-repeat center;
+  // background-size: cover;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+
+  img {
+    // Set a maxium width relative to the parent container
+    max-width: 100%;
+    width: 100%;
+    // avoid stretching, set the height according to the width
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center;";
+    user-select: none;
+
+    @include laptop {
+      min-height: 1000px;
+    }
+  }
+
+  fieldset {
+    @include fieldset-reset;
+  }
+}
+
+.intro__wrapper {
+  position: absolute;
+  padding-top: 280px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.intro__title {
+  max-width: 619px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.intro__subtitle {
+  max-width: 546px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 59px;
+}
+
+.search-form__info {
+  display: flex;
+  @include laptop {
+    flex-wrap: wrap;
+  }
+
+  input {
+    min-width: 297px;
+    max-width: 100%;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    background: transparent url(../img/svg/circle-ico.svg) no-repeat left 6px;
+    border: 0;
+    border-bottom: 2px solid #bfc0c5;
+    background-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    flex-grow: 1;
+    word-break: break-all;
+    white-space: normal;
+    @include laptop {
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+      min-width: auto;
+    }
+  }
+}
+
+.search-form__field::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.search-form__submit {
+  @include laptop {
+    width: 100%;
+  }
 }
