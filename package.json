@@ -1,0 +1,69 @@
+{
+  "name": "Travel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Travel",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "9.5.x",
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
+    "eslint": "^6.5.1",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "4.0.x",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "9.10.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss",
+    "eslint": "eslint \"source/js/**/*.js\"",
+    "test": "npm run editorconfig && npm run stylelint && npm rum eslint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "browserslist": [
+    "chrome >= 52",
+    "last 2 version",
+    "IE >= 10",
+    "Firefox >= 50",
+    "opera >= 41",
+    "safari >= 10",
+    "Edge > 0"
+  ],
+  "eslintIgnore": [
+    "vendor/"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/modules/**/*.js",
+    "source/img/**/*.svg",
+    "source/sсss/global/**/*.{sass,scss}",
+    "source/sсss/blocks/**/*.{sass,scss}",
+    "source/sсss/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.15"
+  },
+  "dependencies": {
+    "i-": "^1.1.5",
+    "mapbox-gl": "^1.5.0",
+    "object-fit-images": "^3.2.4"
+  }
+}
