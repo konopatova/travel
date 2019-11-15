@@ -90,3 +90,11 @@ picture {
   font-size: inherit;
   font-weight: inherit;
 }
+
+.buffer {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  visibility: hidden;
+  white-space: nowrap;
+}

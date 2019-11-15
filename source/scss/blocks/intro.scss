@@ -63,6 +63,7 @@
   }
 
   input {
+    @include field-reset;
     min-width: 297px;
     max-width: 100%;
     margin-right: 60px;
@@ -78,6 +79,8 @@
     flex-grow: 1;
     word-break: break-all;
     white-space: normal;
+    @include transition(border);
+
     @include laptop {
       margin-bottom: 20px;
     }
@@ -86,6 +89,12 @@
       margin-right: 0;
       min-width: auto;
     }
+
+    &:focus {
+      outline: 0;
+      border-bottom: 2px solid $main-accent-color;
+      @include transition(border);
+    }
   }
 }
 
@@ -93,6 +102,17 @@
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  opacity: 1;
+  @include transition(opacity);
+}
+
+.search-form__field:focus::placeholder {
+  @include transition(opacity);
+  opacity: 0;
 }
 
 .search-form__submit {
