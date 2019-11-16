@@ -4,6 +4,13 @@
   left: 0;
   width: 100%;
   z-index: 1;
+  padding-bottom: 20px;
+  @include transition(background-color);
+
+  &--active {
+    @include transition(background-color);
+    background-color: rgba($color: #000000, $alpha: 0.8);
+  }
 }
 
 .header__wrapper {

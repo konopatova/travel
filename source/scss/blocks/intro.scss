@@ -4,18 +4,23 @@
   position: relative;
   // background: url(../img/intro-bg.jpg) no-repeat center;
   // background-size: cover;
-
+  min-height: 100vh;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
 
   img {
-    // Set a maxium width relative to the parent container
-    max-width: 100%;
+    // max-width: 100%;
     width: 100%;
-    // avoid stretching, set the height according to the width
-    height: auto;
+    // // avoid stretching, set the height according to the width
+    // height: 100%;
+
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     font-family: "object-fit: cover; object-position: center;";
@@ -29,6 +34,11 @@
   fieldset {
     @include fieldset-reset;
   }
+}
+
+.intro__img-wrapper {
+  position: relative;
+  padding-bottom: 59%;
 }
 
 .intro__wrapper {
@@ -90,6 +100,7 @@
       min-width: auto;
     }
 
+    &:hover,
     &:focus {
       outline: 0;
       border-bottom: 2px solid $main-accent-color;

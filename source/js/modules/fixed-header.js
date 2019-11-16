@@ -1,14 +1,6 @@
 'use strict';
 
 (function () {
-  svg4everybody();
-
-  objectFitImages();
-})();
-
-'use strict';
-
-(function () {
   // function headerScroll() {
   //   if (document.body.scrollTop > 350) {
   //     header.classList.add('header--active');
@@ -25,10 +17,3 @@
   console.log(header)
 
 })();
-
-'use strict';
-
-(function () {
-  $(function () { objectFitImages() });
-})();
-
