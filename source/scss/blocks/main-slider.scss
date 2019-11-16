@@ -18,11 +18,11 @@
     margin-right: 16px;
     outline: none;
 
-    @include mobile {
-      width: 14px;
-      height: 14px;
-      margin-right: 12px;
-    }
+    // @include mobile {
+    //   width: 14px;
+    //   height: 14px;
+    //   margin-right: 12px;
+    // }
   }
 
   .swiper-pagination {
