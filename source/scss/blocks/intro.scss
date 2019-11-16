@@ -98,6 +98,7 @@
     @include transition(border);
 
     @include laptop {
+      background: transparent url(../img/svg/circle-ico.svg) no-repeat left 0;
       margin-bottom: 20px;
     }
     @include tablet {
