@@ -1,4 +1,8 @@
 .intro {
+  .intro__slider {
+    overflow: hidden;
+  }
+
   .swiper-container {
     z-index: 0;
   }
