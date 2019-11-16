@@ -1,0 +1,129 @@
+.benefits {
+  margin-bottom: 131px;
+}
+
+.benefits__wrap {
+  max-width: 1262px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.benefits__title {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  transform: translateY(-100%);
+  background-color: #ffffff;
+
+  @include laptop {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 0;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.benefits__cards {
+  display: flex;
+  padding: 0 100px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    justify-content: center;
+  }
+}
+
+.benefits__card {
+  min-height: 288px;
+  width: 30%;
+  margin-bottom: 112px;
+  max-width: 317px;
+  flex-shrink: 0;
+
+  &:not(:last-child) {
+    margin-right: 5%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @include laptop {
+    width: 30%;
+  }
+
+  @include tablet {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.benefits__card-pic {
+  padding-top: 96px;
+  overflow: visible;
+  margin-bottom: 37px;
+  cursor: pointer;
+  @include scale;
+
+  &--1 {
+    background: transparent url(../img/benefit-pic01@1x.png) no-repeat left 34px;
+    background-size: 66px;
+  }
+
+  &--2 {
+    background: transparent url(../img/benefit-pic02@1x.png) no-repeat left 34px;
+    background-size: 65px;
+  }
+
+  &--3 {
+    background: transparent url(../img/benefit-pic03@1x.png) no-repeat left 34px;
+    background-size: 58px;
+  }
+
+  @include tablet {
+    background-position: center 34px;
+  }
+}
+
+.benefits__card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.benefits__card-desc {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 39px;
+}
+
+.benefits__card-more {
+  display: inline-block;
+  align-self: flex-end;
+  padding-right: 59px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $main-accent-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
+  transition: 0.2s all;
+
+  &:hover,
+  &:focus {
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  }
+}

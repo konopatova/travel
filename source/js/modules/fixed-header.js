@@ -14,6 +14,29 @@
     scrolled > 30 ? header.classList.add('header--active') : header.classList.remove('header--active')
   })
 
-  console.log(header)
+})();
+
+
+(function () {
+
+  var burgerItem = document.querySelector('.burger');
+  var menu = document.querySelector('.header__nav');
+  var menuCloseItem = document.querySelector('.header__nav-close');
+  var menuLinks = document.querySelectorAll('.header__link');
+
+  burgerItem.addEventListener('click', function (open) {
+    menu.classList.add('header__nav--active');
+  });
+  menuCloseItem.addEventListener('click', function (close) {
+    menu.classList.remove('header__nav--active');
+  });
+
+  if (window.innerWidth <= 767) {
+    for (let i = 0; i < menuLinks.length; i += 1) {
+      menuLinks[i].addEventListener('click', function () {
+        menu.classList.remove('header__nav--active');
+      });
+    }
+  }
 
 })();

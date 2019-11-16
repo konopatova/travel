@@ -1,0 +1,39 @@
+.intro {
+  .swiper-container {
+    overflow: visible;
+    z-index: 0;
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 16px;
+    outline: none;
+
+    @include mobile {
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 86%;
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullets {
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(98, 110, 122, 0.2);
+  }
+}

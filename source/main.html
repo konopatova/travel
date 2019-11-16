@@ -34,20 +34,60 @@
                   <a href="#!" class="header__link">Sign in</a>
                 </li>
               </ul>
+
+              <div class="header__nav-close">
+                <span class="header__nav-close-line"></span>
+                <span class="header__nav-close-line"></span>
+              </div>
             </nav>
+            <div class="header__burger burger">
+              <span class="burger__line burger__line--1"></span>
+              <span class="burger__line burger__line--2"></span>
+              <span class="burger__line burger__line--3"></span>
+            </div>
           </div>
         </div>
       </header>
       <main class="main">
         <section class="intro">
-          <div class="intro__img-wrapper">
-            <picture>
-              <source type="image/webp" media="(min-width: 960px)" srcset="img/intro-bg@1x.webp 1x, img/intro-bg@2x.webp 2x">
-              <source type="image/webp" srcset="img/intro-bg@1x.webp 1x, img/intro-bg@2x.webp 2x">
-              <source media="(min-width: 960px)" srcset="img/intro-bg@1x.jpg 1x, img/intro-bg@2x.jpg 2x">
-              <img src="img/intro-bg@1x.jpg" width="1440" height="962" alt="Discover Amazing places in Japan" srcset="img/intro-bg@2x.jpg 2x">
-            </picture>
+          <div class="intro__slider swiper-container swiper-container--intro">
+            <div class="intro__slider-wrapper swiper-wrapper">
+              <div class="intro__img-wrapper swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/intro-bg@1x.webp 1x, img/intro-bg@2x.webp 2x">
+                  <source type="image/webp" srcset="img/intro-bg@1x.webp 1x, img/intro-bg@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/intro-bg@1x.jpg 1x, img/intro-bg@2x.jpg 2x">
+                  <img src="img/intro-bg@1x.jpg" width="1440" height="962" alt="Discover Amazing places in Japan" srcset="img/intro-bg@2x.jpg 2x">
+                </picture>
+              </div>
+              <div class="intro__img-wrapper swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/intro-bg03@1x.webp 1x, img/intro-bg03@2x.webp 2x">
+                  <source type="image/webp" srcset="img/intro-bg03@1x.webp 1x, img/intro-bg03@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/intro-bg03@1x.jpg 1x, img/intro-bg03@2x.jpg 2x">
+                  <img src="img/intro-bg03@1x.jpg" width="1440" height="992" alt="Discover Amazing places in Japan" srcset="img/intro-bg03@2x.jpg 2x">
+                </picture>
+              </div>
+              <div class="intro__img-wrapper swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/intro-bg02@1x.webp 1x, img/intro-bg02@2x.webp 2x">
+                  <source type="image/webp" srcset="img/intro-bg02@1x.webp 1x, img/intro-bg02@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/intro-bg02@1x.jpg 1x, img/intro-bg02@2x.jpg 2x">
+                  <img src="img/intro-bg02@1x.jpg" width="1440" height="962" alt="Discover Amazing places in Japan" srcset="img/intro-bg02@2x.jpg 2x">
+                </picture>
+              </div>
+              <div class="intro__img-wrapper swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/intro-bg06@1x.webp 1x, img/intro-bg06@2x.webp 2x">
+                  <source type="image/webp" srcset="img/intro-bg06@1x.webp 1x, img/intro-bg06@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/intro-bg06@1x.jpg 1x, img/intro-bg06@2x.jpg 2x">
+                  <img src="img/intro-bg06@1x.jpg" width="1440" height="992" alt="Discover Amazing places in Japan" srcset="img/intro-bg06@2x.jpg 2x">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
+
           <div class="intro__wrapper">
             <div class="container">
               <h1 class="intro__title">
@@ -67,6 +107,49 @@
                   </div>
                 </fieldset>
               </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits">
+          <div class="benefits__wrap">
+            <h2 class="benefits__title">
+              Benefits of Odigo
+            </h2>
+            <div class="benefits__cards">
+              <div class="benefits__card benefits__card-pic benefits__card-pic--1">
+                <h3 class="benefits__card-title">
+                  Welcome to Odigo!
+                </h3>
+                <p class="benefits__card-desc">
+                  Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </p>
+                <a href="#!" class="benefits__card-more">
+                  LEARN MORE
+                </a>
+              </div>
+              <div class="benefits__card benefits__card-pic benefits__card-pic--2">
+                <h3 class="benefits__card-title">
+                  Your Personal Japan Guide
+                </h3>
+                <p class="benefits__card-desc">
+                  Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </p>
+                <a href="#!" class="benefits__card-more">
+                  LEARN MORE
+                </a>
+              </div>
+              <div class="benefits__card benefits__card-pic benefits__card-pic--3">
+                <h3 class="benefits__card-title">
+                  Promoting Local Businesses
+                </h3>
+                <p class="benefits__card-desc">
+                  Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                </p>
+                <a href="#!" class="benefits__card-more">
+                  LEARN MORE
+                </a>
+              </div>
             </div>
           </div>
         </section>
