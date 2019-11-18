@@ -110,11 +110,11 @@
 }
 
 @mixin hover {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s linear;
 
   &:hover {
-    transition: opacity 0.3s ease;
-    opacity: 0.75;
+    transition: opacity 0.25s linear;
+    opacity: 0.65;
   }
 }
 

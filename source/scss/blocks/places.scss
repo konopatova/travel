@@ -1,0 +1,101 @@
+.places {
+  margin-bottom: 131px;
+
+  figure {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.places__title {
+  margin-right: 15px;
+}
+
+.places__view-all {
+  font-size: 16px;
+  color: $main-accent-color;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+
+  @include hover;
+}
+
+.places__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.places__card {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &:hover {
+    .places__card-pic {
+      @include scale;
+    }
+  }
+
+  &--size_lg {
+    flex: 0 1 calc(50% - 5px);
+  }
+
+  &--size_sm {
+    flex: 0 1 calc(33% - 3px);
+  }
+}
+
+.places__card-title {
+  position: absolute;
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+}
+
+.places__card-pic {
+  width: 100%;
+
+  &--size_lg {
+    height: 354px;
+    object-fit: cover;
+  }
+
+  &--size_sm {
+    height: 283px;
+    object-fit: cover;
+  }
+}
+
+.places__card-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}

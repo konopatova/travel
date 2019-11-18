@@ -3,7 +3,7 @@
 }
 
 .benefits__wrap {
-  max-width: 1262px;
+  //max-width: 1262px;
   background-color: #ffffff;
   margin: 0 auto;
   box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
@@ -39,29 +39,35 @@
   display: flex;
   padding: 0 100px;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  @include tablet {
+  @include laptop {
     justify-content: center;
   }
 }
 
 .benefits__card {
   min-height: 288px;
-  width: 30%;
+  min-width: 220px;
+  // width: 30%;
   margin-bottom: 112px;
-  max-width: 317px;
-  flex-shrink: 0;
+  // max-width: 317px;
+  flex: 0 1 calc(33% - 2em);
 
-  &:not(:last-child) {
-    margin-right: 5%;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 5%;
+  // }
 
   &:nth-child(3n) {
     margin-right: 0;
   }
 
+  // @include laptop {
+  //   width: 30%;
+  // }
+
   @include laptop {
-    width: 30%;
+    flex: 0 1 calc(60% - 2em);
   }
 
   @include tablet {
@@ -80,20 +86,36 @@
   &--1 {
     background: transparent url(../img/benefit-pic01@1x.png) no-repeat left 34px;
     background-size: 66px;
+
+    @include retina {
+      background: transparent url(../img/benefit-pic01@2x.png) no-repeat left
+        34px;
+    }
   }
 
   &--2 {
     background: transparent url(../img/benefit-pic02@1x.png) no-repeat left 34px;
     background-size: 65px;
+
+    @include retina {
+      background: transparent url(../img/benefit-pic02@2x.png) no-repeat left
+        34px;
+    }
   }
 
   &--3 {
     background: transparent url(../img/benefit-pic03@1x.png) no-repeat left 34px;
     background-size: 58px;
+
+    @include retina {
+      background: transparent url(../img/benefit-pic03@2x.png) no-repeat left
+        34px;
+    }
   }
 
-  @include tablet {
+  @include laptop {
     background-position: center 34px;
+    padding-top: 114px;
   }
 }
 
