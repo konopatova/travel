@@ -42,6 +42,23 @@
   @include mobile {
     flex: 0 1 calc(100%);
   }
+
+  &:hover {
+    .top__card-likes svg {
+      fill: $accent-color;
+    }
+
+    .top__card-comments svg {
+      fill: $main-accent-color;
+    }
+  }
+
+  &:hover {
+    .top__card-svg {
+      transition: transform 0.2s linear, fill 0.2s linear;
+      transform: scale(1.2);
+    }
+  }
 }
 
 .top__card-stats {
@@ -65,14 +82,22 @@
   margin: 0 auto 0 0;
 }
 
+.top__card-svg {
+  transition: transform 0.2s linear, fill 0.2s linear;
+}
+
 .top__card-likes {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  padding-right: 20px;
-  background: url(../img/svg/heart-ico.svg) no-repeat right;
   margin-right: 14px;
+
+  svg {
+    fill: white;
+    margin-left: 5px;
+    transform: translateY(2px);
+  }
 }
 
 .top__card-comments {
@@ -80,8 +105,12 @@
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  padding-right: 23px;
-  background: url(../img/svg/comment-ico.svg) no-repeat right;
+
+  svg {
+    fill: white;
+    margin-left: 5px;
+    transform: translateY(2px);
+  }
 }
 
 .top__card-desc {
