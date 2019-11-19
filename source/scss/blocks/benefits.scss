@@ -1,5 +1,13 @@
 .benefits {
   margin-bottom: 131px;
+
+  @include laptop {
+    margin-bottom: 36px;
+
+    &.section-wrapper {
+      padding: 0;
+    }
+  }
 }
 
 .benefits__wrap {
@@ -22,11 +30,13 @@
   font-size: 35px;
   line-height: 42px;
   padding: 93px 100px 88px 100px;
-  transform: translateY(-100%);
+  transform: translateY(-99%);
   background-color: #ffffff;
 
   @include laptop {
     position: relative;
+    padding: 0;
+    left: 0;
     padding-top: 40px;
     padding-bottom: 0;
     justify-content: center;
@@ -84,36 +94,37 @@
   @include scale;
 
   &--1 {
-    background: transparent url(../img/benefit-pic01@1x.png) no-repeat left 34px;
+    background: transparent url(../img/svg/benefits01.svg) no-repeat left 34px;
     background-size: 66px;
 
-    @include retina {
-      background: transparent url(../img/benefit-pic01@2x.png) no-repeat left
-        34px;
-    }
+    // @include retina {
+    //   background: transparent url(../img/benefit-pic01@2x.png) no-repeat left
+    //     34px;
+    // }
   }
 
   &--2 {
-    background: transparent url(../img/benefit-pic02@1x.png) no-repeat left 34px;
+    background: transparent url(../img/svg/benefits02.svg) no-repeat left 34px;
     background-size: 65px;
 
-    @include retina {
-      background: transparent url(../img/benefit-pic02@2x.png) no-repeat left
-        34px;
-    }
+    // @include retina {
+    //   background: transparent url(../img/benefit-pic02@2x.png) no-repeat left
+    //     34px;
+    // }
   }
 
   &--3 {
-    background: transparent url(../img/benefit-pic03@1x.png) no-repeat left 34px;
+    background: transparent url(../img/svg/benefits03.svg) no-repeat left 34px;
     background-size: 58px;
 
-    @include retina {
-      background: transparent url(../img/benefit-pic03@2x.png) no-repeat left
-        34px;
-    }
+    // @include retina {
+    //   background: transparent url(../img/benefit-pic03@2x.png) no-repeat left
+    //     34px;
+    // }
   }
 
   @include laptop {
+    background-size: 77px;
     background-position: center 34px;
     padding-top: 114px;
   }
@@ -124,6 +135,10 @@
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 26px;
+
+  @include laptop {
+    text-align: center;
+  }
 }
 
 .benefits__card-desc {
@@ -138,14 +153,8 @@
   padding-right: 59px;
   font-size: 16px;
   line-height: 24px;
-  color: $main-accent-color;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
-  background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
-  transition: 0.2s all;
-
-  &:hover,
-  &:focus {
-    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
-  }
+  @include arrow;
 }

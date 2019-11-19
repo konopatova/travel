@@ -28,7 +28,7 @@
     user-select: none;
 
     @include laptop {
-      min-height: 1000px;
+      min-height: 880px;
       position: relative;
     }
   }
@@ -42,7 +42,7 @@
   padding-bottom: 69%;
 
   @include laptop {
-    min-height: 1000px;
+    min-height: 800px;
     padding-bottom: 0;
   }
 }
@@ -62,6 +62,11 @@
   line-height: 60px;
   color: #ffffff;
   margin-bottom: 22px;
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }
 
 .intro__subtitle {
@@ -70,6 +75,10 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 59px;
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .search-form__info {
@@ -105,6 +114,7 @@
       width: 100%;
       margin-right: 0;
       min-width: auto;
+      padding-bottom: 12px;
     }
 
     &:hover,
@@ -126,6 +136,10 @@
   white-space: normal;
   opacity: 1;
   @include transition(opacity);
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .search-form__field:focus::placeholder {

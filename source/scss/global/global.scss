@@ -106,15 +106,23 @@ picture {
   position: relative;
   padding-bottom: 10px;
 
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
   &::after {
     display: block;
     content: "";
     width: 253px;
     height: 3px;
-    background-color: #006dfe;
+    background-color: $main-accent-color;
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @include tablet {
+      width: 78px;
+    }
   }
 }
 

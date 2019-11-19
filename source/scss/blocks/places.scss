@@ -3,7 +3,13 @@
 
   figure {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  picture {
+    margin: 0;
+    overflow: hidden;
   }
 }
 
@@ -13,6 +19,10 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
+
+  @include laptop {
+    margin-bottom: 0;
+  }
 }
 
 .places__title {
@@ -21,12 +31,15 @@
 
 .places__view-all {
   font-size: 16px;
-  color: $main-accent-color;
+  color: black;
   text-decoration: none;
   padding-right: 59px;
-  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  transition: 0.2s all;
+  @include arrow-reverse;
 
-  @include hover;
+  @include laptop {
+    margin-bottom: 25px;
+  }
 }
 
 .places__cards {
@@ -38,32 +51,50 @@
 .places__card {
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s linear;
 
-  &::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(21, 24, 36, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-
-  &:hover {
-    .places__card-pic {
-      @include scale;
-    }
+  &:hover .places__card-pic {
+    filter: brightness(100%);
+    transform: scale(1.1);
+    transition: transform 0.2s linear, filter 0.2s linear;
   }
 
   &--size_lg {
     flex: 0 1 calc(50% - 5px);
+    max-height: 354px;
+
+    @include tablet {
+      max-height: 230px;
+    }
   }
 
   &--size_sm {
     flex: 0 1 calc(33% - 3px);
+    max-height: 283px;
+
+    @include tablet {
+      flex: 0 1 calc(50% - 5px);
+      max-height: 230px;
+    }
+
+    &:last-child {
+      @include tablet {
+        flex: 0 1 calc(100%);
+      }
+    }
   }
+
+  // &::after {
+  //   display: block;
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(21, 24, 36, 0.4);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 2;
+  // }
 }
 
 .places__card-title {
@@ -74,19 +105,38 @@
   bottom: 27px;
   left: 29px;
   z-index: 3;
+
+  @include mobile {
+    font-size: 26px;
+    line-height: 1.1;
+  }
 }
 
 .places__card-pic {
   width: 100%;
+  transition: transform 0.2s linear, filter 0.2s linear;
+  filter: brightness(70%);
 
   &--size_lg {
     height: 354px;
     object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center;";
+
+    @include tablet {
+      height: 230px;
+    }
   }
 
   &--size_sm {
     height: 283px;
     object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center;";
+
+    @include tablet {
+      height: 230px;
+    }
   }
 }
 

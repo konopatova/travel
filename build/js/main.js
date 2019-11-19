@@ -31,12 +31,16 @@
   var menu = document.querySelector('.header__nav');
   var menuCloseItem = document.querySelector('.header__nav-close');
   var menuLinks = document.querySelectorAll('.header__link');
+  var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
   burgerItem.addEventListener('click', function (open) {
     menu.classList.add('header__nav--active');
+    disableBodyScroll();
   });
   menuCloseItem.addEventListener('click', function (close) {
     menu.classList.remove('header__nav--active');
+    enableBodyScroll();
   });
 
   if (window.innerWidth <= 767) {

@@ -122,8 +122,8 @@
   transition: transform 0.2s linear;
 
   &:hover {
+    transform: scale(1.05);
     transition: transform 0.2s linear;
-    transform: scale(1.1);
   }
 }
 
@@ -158,4 +158,24 @@
 @mixin fieldset-reset {
   border: none;
   padding: 0;
+}
+
+@mixin arrow {
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
+  transition: 0.2s all;
+
+  &:hover,
+  &:focus {
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  }
+}
+
+@mixin arrow-reverse {
+  transition: 0.2s all;
+  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+
+  &:hover,
+  &:focus {
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
+  }
 }
