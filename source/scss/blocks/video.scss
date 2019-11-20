@@ -1,12 +1,14 @@
 .videos {
   width: 100%;
   position: relative;
+  min-height: 500px;
 
   video {
     width: 100%;
     object-fit: cover;
+    object-position: center;
 
-    @include object-fit;
+    @include object-fit(cover, center);
   }
 }
 
@@ -16,9 +18,9 @@
   position: relative;
 }
 
-.video__item {
-  padding-top: 56.25%;
-}
+// .video__item {
+//   padding-top: 50.25%;
+// }
 
 .video__element {
   position: absolute;
@@ -26,4 +28,29 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#play {
+  width: 150px;
+  font-size: 17px;
+  padding: 15px;
+  border: none;
+  background: #0e0d0d;
+  color: #f4f4f4;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  @include transitionMulty(background-color, color);
+
+  &:hover {
+    @include transitionMulty(background-color, color);
+    background: $main-accent-color;
+    color: white;
+  }
+}
+
+.video-play {
+  opacity: 0.3;
 }
