@@ -1,0 +1,29 @@
+.logo {
+  flex-shrink: 0;
+  display: block;
+  height: auto;
+
+  &.header__logo-link {
+    min-width: 100px;
+  }
+
+  &.footer__logo-link {
+    min-width: 200px;
+  }
+
+  .logo-pic {
+    @include transitionMulty(fill, transform);
+    fill: white;
+
+    &:hover {
+      transform: scale(1.1);
+      @include transitionMulty(fill, transform);
+      fill: $main-accent-color;
+    }
+
+    &.footer__logo-pic {
+      height: auto;
+      width: 40%;
+    }
+  }
+}

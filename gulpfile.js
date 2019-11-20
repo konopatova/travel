@@ -114,6 +114,7 @@ gulp.task("copy", function () {
         "source/img/**/*.{png,jpg,svg}",
         "source/js/**",
         "source/*.ico",
+        "source/video/**",
         "source/data/*.json"
       ],
       {

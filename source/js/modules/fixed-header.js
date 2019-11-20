@@ -45,7 +45,7 @@
 
 })();
 
-// Scroll to anchors
+// Scroll to anchors class .js-scroll minus header height
 (function () {
 
   const smoothScroll = function (targetEl, duration) {

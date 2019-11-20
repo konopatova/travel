@@ -11,9 +11,9 @@
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
-            <a href="#" class="header__logo-link">
+            <a href="#" class="header__logo-link logo">
               <!-- <img src="/img/svg/odigo-logo.svg" alt="Discover Amazing places in Japan" class="header__logo-pic"> -->
-              <svg width="82" height="31" class="header__logo-pic">
+              <svg width="82" height="31" class="header__logo-pic logo-pic">
                 <use xlink:href="img/sprite.svg#odigo-logo"></use>
                 </svg>
               </a>
@@ -22,16 +22,16 @@
             <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__item">
-                  <a href="#!" class="header__link">Articles</a>
+                  <a href="#articles" class="header__link js-scroll">Articles</a>
                 </li>
                 <li class="header__item">
-                  <a href="#!" class="header__link">Locations</a>
+                  <a href="#locations" class="header__link js-scroll">Locations</a>
                 </li>
                 <li class="header__item">
-                  <a href="#!" class="header__link">Videos</a>
+                  <a href="#videos" class="header__link js-scroll">Videos</a>
                 </li>
                 <li class="header__item">
-                  <a href="#!" class="header__link">Sign in</a>
+                  <a href="#sign-in" class="header__link js-scroll">Sign in</a>
                 </li>
               </ul>
 
@@ -231,7 +231,7 @@
           </div>
         </section>
 
-        <section class="tours section-wrapper">
+        <section class="tours section-wrapper" id="articles">
           <div class="tours__tour tour">
             <div class="tour__pic tour__pic--size_lg tour__card">
               <picture>
@@ -274,7 +274,7 @@
           </div>
         </section>
 
-        <section class="top section-wrapper">
+        <section class="top section-wrapper" id="locations">
           <h2 class="top__title section-title">
             Today top places to visit </h2>
           <div class="top__cards">
@@ -450,10 +450,88 @@
                                   </div>
                                 </section>
 
+                                <div class="videos" id="videos">
+                                  <!-- <iframe class="video__element" src="https://www.youtube.com/embed/URDXZSJZ2ME" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                  <div class="video__item"></div>
+                                  <video class="video__element" loop="" muted="" autoplay="" poster="video/poster.jpg" controls="">
+                                    <source src="video/videoHD.mp4" type="video/mp4">
+                                    <source src="video/videoHD-webm.webm" type="video/webm">
+                                    <source src="video/videoHD-ogv.ogv" type="video/ogv">
+                                  </video>
+                                </div>
+
                               </main>
-                              <script src="js/vendor.min.js"></script>
+
+                              <footer class="footer">
+                                <div class="container">
+                                  <div class="footer__items">
+                                    <div class="footer__logo">
+                                      <a href="#" class="footer__logo-link logo">
+                                        <!-- <img src="/img/svg/odigo-logo.svg" alt="Discover Amazing places in Japan" class="header__logo-pic"> -->
+                                        <svg width="82" height="31" class="footer__logo-pic logo-pic">
+                                          <use xlink:href="img/sprite.svg#odigo-logo"></use>
+                                          </svg>
+                                        </a>
+                                      </div>
+                                      <nav class="footer__nav">
+                                        <ul class="footer__menu">
+                                          <li class="footer__menu-item">
+                                            <h3 class="footer__menu-title">Company</h3>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">About</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Team</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Careers</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Privacy policy</a>
+                                          </li>
+                                        </ul>
+                                        <ul class="footer__menu">
+                                          <li class="footer__menu-item">
+                                            <h3 class="footer__menu-title">Locations</h3>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Tokyo</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Kyoto</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Osaka</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Hokkaido</a>
+                                          </li>
+                                        </ul>
+                                        <ul class="footer__menu">
+                                          <li class="footer__menu-item">
+                                            <h3 class="footer__menu-title">Social Media</h3>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Facebook</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Twitter</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Instagram</a>
+                                          </li>
+                                          <li class="footer__menu-item">
+                                            <a href="#!" class="footer__menu-link">Youtube</a>
+                                          </li>
+                                        </ul>
+                                      </nav>
+                                    </div>
+                                  </div>
+                                </footer>
+                                <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
 
 
-                            </body>
-                          </html>
+                              </body>
+                            </html>

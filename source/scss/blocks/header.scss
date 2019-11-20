@@ -37,24 +37,6 @@
     margin: 10px 40px 40px 0;
     align-self: baseline;
   }
-
-  .header__logo-link {
-    flex-shrink: 0;
-    display: block;
-    height: auto;
-    min-width: 100px;
-
-    .header__logo-pic {
-      @include transitionMulty(fill, transform);
-      fill: white;
-
-      &:hover {
-        transform: scale(1.1);
-        @include transitionMulty(fill, transform);
-        fill: $main-accent-color;
-      }
-    }
-  }
 }
 
 .header__nav {
