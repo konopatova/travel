@@ -3,6 +3,10 @@
   position: relative;
   min-height: 500px;
 
+  @include mobile {
+    min-height: 200px;
+  }
+
   video {
     width: 100%;
     object-fit: cover;

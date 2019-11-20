@@ -1,6 +1,10 @@
 .places {
   margin-bottom: 131px;
 
+  @include laptop {
+    margin-bottom: 36px;
+  }
+
   figure {
     margin: 0;
     margin-bottom: 10px;

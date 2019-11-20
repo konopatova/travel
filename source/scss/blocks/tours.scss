@@ -1,5 +1,9 @@
 .tours {
   margin-bottom: 139px;
+
+  @include laptop {
+    margin-bottom: 36px;
+  }
 }
 
 .tours__tour {
