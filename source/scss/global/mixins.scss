@@ -179,3 +179,24 @@
     background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
   }
 }
+
+@mixin hover-hover {
+  @media (hover: hover) {
+    /*Mouse device styles here */
+    @content;
+  }
+}
+
+@mixin hover-demand {
+  @media (hover: on-demand) {
+    /* Touch screen device styles here */
+    @content;
+  }
+}
+
+@mixin hover-none {
+  @media (hover: none) {
+    /* No hover styles here */
+    @content;
+  }
+}

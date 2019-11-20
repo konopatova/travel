@@ -92,7 +92,6 @@
   margin-bottom: 37px;
   cursor: pointer;
   transition: transform 0.2s linear;
-  touch-action: none;
 
   &--1 {
     background: transparent url(../img/svg/benefits01.svg) no-repeat left 34px;
@@ -130,9 +129,11 @@
     padding-top: 114px;
   }
 
-  &:hover {
-    transition: transform 0.2s linear;
-    transform: scale(1.03);
+  @include hover-hover {
+    &:hover {
+      transition: transform 0.2s linear;
+      transform: scale(1.03);
+    }
   }
 }
 
