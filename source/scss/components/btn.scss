@@ -37,7 +37,7 @@
   border: 1px solid black;
   border-radius: 100%;
   z-index: 1000;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
@@ -53,10 +53,16 @@
     width: 0;
     border: 8px solid transparent;
     border-bottom-color: black;
+    transition: all 0.3s;
   }
 
   &:hover {
-    background-color: rgba($color: black, $alpha: 0.3);
+    background-color: rgba($color: black, $alpha: 0.9);
+
+    &::after {
+      margin-top: -14px;
+      border-bottom-color: white;
+    }
   }
 
   &.show {
