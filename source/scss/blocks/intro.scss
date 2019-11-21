@@ -41,6 +41,10 @@
   position: relative;
   padding-bottom: 69%;
 
+  @media (max-width: 1240px) {
+    padding-bottom: 74%;
+  }
+
   @include laptop {
     min-height: 800px;
     padding-bottom: 0;
