@@ -19,6 +19,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var imageminMozjpeg = require('imagemin-mozjpeg');
 
 gulp.task("del", function () {
   return del("build");
@@ -45,11 +46,20 @@ gulp.task("images", function () {
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.jpegtran({ optimizationLevel: 5, progressive: true }),
+        imagemin.jpegtran({ progressive: true }),
         //imagemin.svgo()
-      ])
+      ]),
     )
     .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("mozjpeg", function () {
+  return gulp
+    .src("build/img/**/*.jpg")
+    .pipe(imagemin([imageminMozjpeg({
+      quality: 85
+    })]))
+    .pipe(gulp.dest("build/img/"));
 });
 
 gulp.task("webp", function () {
@@ -136,6 +146,7 @@ gulp.task(
     "del",
     "copy",
     "webp",
+    "mozjpeg",
     "images",
     "sprite",
     "css",
