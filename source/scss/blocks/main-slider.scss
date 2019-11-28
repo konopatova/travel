@@ -28,6 +28,10 @@
   .swiper-pagination {
     bottom: 86%;
     z-index: 10;
+
+    @media (max-width: 1280px) and (min-width: 980px) {
+      bottom: 82%;
+    }
   }
 
   .swiper-pagination-bullets {

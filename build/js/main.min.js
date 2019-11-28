@@ -137,6 +137,8 @@
   var btn = $('#top-button');
 
   $(window).scroll(function () {
+    btn.removeClass('show');
+
     if ($(window).scrollTop() > 300) {
       btn.addClass('show');
     } else {

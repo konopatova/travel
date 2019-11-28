@@ -26,6 +26,8 @@
 }
 
 #top-button {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 50vh;
   right: 4vw;
@@ -38,8 +40,6 @@
   border-radius: 100%;
   z-index: 1000;
   transition: all 0.3s;
-  opacity: 0;
-  visibility: hidden;
   cursor: pointer;
 
   &::after {
